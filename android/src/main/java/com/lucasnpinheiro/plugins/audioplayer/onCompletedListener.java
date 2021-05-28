@@ -1,4 +1,4 @@
-package com.thouland.plugins.audioplayer;
+package com.lucasnpinheiro.plugins.audioplayer;
 
 interface onCompletedListener {
     void onCompleted();

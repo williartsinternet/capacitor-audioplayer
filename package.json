@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thouland/capacitor-audioplayer.git"
+    "url": "git+https://github.com/lucasnpinheiro/capacitor-audioplayer.git"
   },
   "bugs": {
-    "url": "https://github.com/thouland/capacitor-audioplayer/issues"
+    "url": "https://github.com/lucasnpinheiro/capacitor-audioplayer/issues"
   },
   "keywords": [
     "capacitor",

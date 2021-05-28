@@ -1,4 +1,4 @@
-package com.thouland.plugins.audioplayer;
+package com.lucasnpinheiro.plugins.audioplayer;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;

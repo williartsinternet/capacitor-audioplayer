@@ -1,4 +1,4 @@
-package com.thouland.plugins.audioplayer;
+package com.lucasnpinheiro.plugins.audioplayer;
 
 import android.content.Context;
 import android.media.MediaPlayer;
