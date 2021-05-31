@@ -4,9 +4,10 @@ import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
+import com.getcapacitor.JSArray;
+import com.getcapacitor.NativePlugin;
 
-@CapacitorPlugin(name = "Audioplayer")
+// @CapacitorPlugin(name = "Audioplayer")
 public class AudioplayerPlugin extends Plugin implements onCompletedListener {
 
     private Audioplayer implementation = new Audioplayer();

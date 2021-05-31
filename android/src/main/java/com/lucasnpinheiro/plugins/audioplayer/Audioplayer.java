@@ -13,8 +13,7 @@ public class Audioplayer {
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private Context context;
     public AudioplayerPlugin AudioplayerPlugin;
-    Desmp3(){
-    }
+
     public void setup(AudioplayerPlugin AudioplayerPlugin){
         this.AudioplayerPlugin = AudioplayerPlugin;
         this.context = AudioplayerPlugin.getContext();
@@ -24,7 +23,7 @@ public class Audioplayer {
     private void initMediaPlayer(PluginCall call,String url) {
         try {
             Log.e("dot","initMediaPlayer:"+url);
-            if (mediaPlayer != null) { 
+            if (mediaPlayer != null) {
                 mediaPlayer.stop();
             }
             mediaPlayer = new MediaPlayer();
