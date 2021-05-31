@@ -3,7 +3,7 @@ import UIKit
 import AVFoundation
 
 @objc public class Audioplayer: NSObject {
-   var player:AVPlayer
+    var player:AVPlayer
     var despPlugin:AudioplayerPlugin
     
     init(player:AVPlayer,despPlugin:AudioplayerPlugin) {
@@ -19,14 +19,15 @@ import AVFoundation
     public func setup(value: AudioplayerPlugin){
         despPlugin = value
      }
-   public func start(value: String) -> String {
+
+    public func start(value: String) -> String {
         let playItem = AVPlayerItem(url: URL(string: value)!)
         player = AVPlayer(playerItem: playItem)
         player.play()
-    NotificationCenter.default.addObserver(self, selector:#selector(playerDidFinishPlaying),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        NotificationCenter.default.addObserver(self, selector:#selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         return "yes"
     }
+
     public func pause() -> String {
         player.pause()
         return "yes"

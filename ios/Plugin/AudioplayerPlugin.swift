@@ -8,8 +8,8 @@ import AVFoundation
  */
 @objc(AudioplayerPlugin)
 public class AudioplayerPlugin: CAPPlugin {
-     private var implementation :Audioplayer?
-
+    
+    private var implementation :Audioplayer?
     
     @objc func start(_ call: CAPPluginCall)  -> String {
         let value = call.getString("value") ?? ""
@@ -22,29 +22,31 @@ public class AudioplayerPlugin: CAPPlugin {
         ])
         return "yes"
     }
-    @objc func onCompleted() {
-                notifyListeners("nextSong", data: nil);
-           }
 
-        @objc func pause(_ call: CAPPluginCall)  -> String {
-                call.resolve([
-                    "value": implementation?.pause()
-                ])
-              return "yes"
+    @objc func onCompleted() {
+        notifyListeners("nextSong", data: nil);
+    }
+
+    @objc func pause(_ call: CAPPluginCall)  -> String {
+        call.resolve([
+            "value": implementation?.pause()
+        ])
+        return "yes"
     }
       
     @objc func stop(_ call: CAPPluginCall)  -> String {
-                call.resolve([
-                    "value": implementation?.stop()
-                ])
-          return "yes"
-}
-        @objc func echo(_ call: CAPPluginCall)  -> String {
+        call.resolve([
+            "value": implementation?.stop()
+        ])
+        return "yes"
+    }
+
+    @objc func echo(_ call: CAPPluginCall)  -> String {
         let value = call.getString("value") ?? ""
         call.resolve([
             "value": implementation?.echo(value)
         ])
-            return "yes"
+        return "yes"
     }
 
 }
