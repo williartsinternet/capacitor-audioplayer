@@ -44,7 +44,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "next",
+    "@capacitor/android": "4.3.0",
     "@capacitor/core": "next",
     "@capacitor/docgen": "^0.0.10",
     "@capacitor/ios": "next",
